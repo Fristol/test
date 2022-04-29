@@ -1,5 +1,6 @@
+let loc = window.location.href;
 async function get() {
-    let url = await fetch(window.location.href + 'api/redis');
+    let url = await fetch(loc + 'api/redis');
     let res = await url.json();
     document.querySelector('.list').innerHTML = '';
     if (res.status === true) {
@@ -11,7 +12,7 @@ async function get() {
 }
 
 async function remove(key) {
-    let url = await fetch(window.location.href + `api/redis/${key}`, {
+    let url = await fetch(loc + `api/redis/${key}`, {
         method: "DELETE"
     });
     let res = await url.json();
