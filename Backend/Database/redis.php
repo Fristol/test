@@ -4,7 +4,6 @@
 require_once './Backend/Interfaces/Template.php';
 require_once './Backend/vendor/autoload.php';
 
-use Interfaces\Template;
 use Predis\Client;
 
 

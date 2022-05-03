@@ -1,7 +1,7 @@
 <?php
 
 namespace Main;
-require_once 'Interfaces\Template.php';
+require_once 'Interfaces/Template.php';
 
 
 class Main
@@ -21,7 +21,7 @@ class Main
 
     public function start()
     {
-        include_once 'Database/' . $this->db . '.php';
+        require_once 'Database/' . $this->db . '.php';
                 switch ($this->command) {
                     case 'add':
                         \Database::add($this->key, $this->value);

@@ -1,6 +1,6 @@
 <?php
 
-namespace Interfaces;
+
 interface Template
 {
     public static function getAll();
