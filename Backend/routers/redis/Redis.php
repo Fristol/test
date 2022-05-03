@@ -7,7 +7,7 @@ require_once './Backend/Database/redis.php';
 
 class Metods extends \Exception
 {
-    public static function getAll($urlData, $urls)
+    public static function getAll($urls)
     {
         //GET /api/redis
         header('Content-type: json/application');
@@ -41,7 +41,7 @@ class Metods extends \Exception
         //DELETE /api/redis/{key}
         header('Content-type: json/application');
         try {
-            if (count($urls) > 3){
+            if (count($urls) != 3){
                 throw new \Exception('Неправельное указание параметров');
             }
             if (array_key_exists($key, \Database::getAll())) {
