@@ -11,10 +11,9 @@ $url = rtrim($url, '/');
 $urls = explode('/', $url);
 //Routers
 $router = $urls[1];
-$urlData = $urls[2];
 // Connect routers file
 if ($urls[0] === 'api') {
     include_once 'Backend/routers/' . $router . '/route.php';
-    route($method, $urlData, $urls);
+    route($method, $urls);
 }
 ?>
