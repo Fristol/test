@@ -1,14 +1,14 @@
 <?php
 use Redis\Metods\Metods;
 require_once 'Redis.php';
-function route($method, $urlData, $urls)
+function route($method, $urls)
 {
     switch ($method) {
         case 'GET':
-            Metods::getAll($urlData, $urls);
+            Metods::getAll($urls);
             break;
         case 'DELETE':
-            Metods::delete($urlData, $urls);
+            Metods::delete($urls[2], $urls);
             break;
     }
 }
